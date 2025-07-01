@@ -1,5 +1,7 @@
 
 'use client'
+import { Footer } from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
 import { Button } from "@/app/components/ui/button";
 import { useBook } from "@/app/contexts/BookContext";
 import { Trash2, Plus, Minus } from "lucide-react";
@@ -21,13 +23,13 @@ const Cart = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="pt-20 pb-16">
+    
+      <div className="pt-30">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-8xl mx-auto">
             <h1 className="text-4xl font-serif font-bold text-slate-800 mb-8">
               Shopping Cart
             </h1>
-            
             {state.cart.length === 0 ? (
               <div className="text-center py-16">
                 <p className="text-xl text-slate-600 mb-6">Your cart is empty</p>

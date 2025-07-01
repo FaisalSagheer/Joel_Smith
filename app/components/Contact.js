@@ -6,7 +6,7 @@ import { Textarea } from "./ui/textarea";
 
 export function Contact() {
   return (
-    <section className="py-20">
+    <section className="py-30">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-serif text-slate-800 mb-6">Get in Touch</h2>

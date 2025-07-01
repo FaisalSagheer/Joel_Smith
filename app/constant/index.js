@@ -4,7 +4,7 @@ export const navItems = [
   { prop: "Author", href: "/pages/about-author" },
   { prop: "About Book", href: "/pages/about-book" },
   { prop: "Shop", href: "/pages/shop" },
-  { prop: "Blogs", href: "/pages/blog" },
+  { prop: "Blogs", href: "/pages/blogs" },
   { prop: "Contact", href: "/pages/contact" },
 ];
 
@@ -119,6 +119,41 @@ export const TourData = [
   },
 ];
 
+export const blogPosts = [
+  {
+    id: 1,
+    title: "The Art of Character Development",
+    excerpt:
+      "Discover the secrets behind creating memorable characters that readers will connect with on a deep emotional level.",
+    image:
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop",
+    date: "March 15, 2024",
+    readTime: "5 min read",
+    category: "Writing Tips",
+  },
+  {
+    id: 2,
+    title: "Finding Inspiration in Everyday Moments",
+    excerpt:
+      "Learn how to transform ordinary experiences into extraordinary stories that captivate your audience.",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop",
+    date: "March 10, 2024",
+    readTime: "7 min read",
+    category: "Inspiration",
+  },
+  {
+    id: 3,
+    title: "The Publishing Journey: What to Expect",
+    excerpt:
+      "Navigate the complex world of publishing with insights from my personal experience as a debut author.",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
+    date: "March 5, 2024",
+    readTime: "10 min read",
+    category: "Publishing",
+  },
+];
 
 
 export const footer1 = [

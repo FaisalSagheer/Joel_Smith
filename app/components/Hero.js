@@ -25,14 +25,16 @@ export default function Hero() {
                 Joel <span className="text-amber-400">Smith</span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-300 mb-8 font-light">
-                Author of the acclaimed novel
+                Author of the acclaimed Observations
               </p>
               <h2 className="text-3xl md:text-4xl font-serif italic text-amber-400 mb-12">
                 "Some Observations and Opinions"
               </h2>
               <p className="text-lg text-slate-300 mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                A haunting tale of family secrets, inherited mysteries, and the
-                power of truth to heal old wounds.
+                Some Observations and Opinions is not your average collection of
+                essays or memoir. It is an exploration of the human condition by
+                an 83-year-old man who has seen decades of change, progress,
+                regression, beauty, absurdity, and occasional grace.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button

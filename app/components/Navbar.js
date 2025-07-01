@@ -1,84 +1,106 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { navItems } from "@/app/constant";
-import { Menu, X } from "lucide-react";
+import { BookOpen, Menu, X, ShoppingCart } from "lucide-react";
+import { useState } from "react";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { usePathname } from "next/navigation";
+import { useBook } from "../contexts/BookContext";
+import { navItems } from "../constant";
+import { BookPopup } from "./BookPopup";
 
 function Navbar() {
-  const [MobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const location = usePathname();
+  const { state, openBookPopup } = useBook();
 
-  const toggleNavbar = () => {
-    setMobileDrawerOpen(!MobileDrawerOpen);
-  };
-  const [color, setColor] = useState(false);
-  const changeColor = () => {
-    setColor(window.scrollY >= 500);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", changeColor);
+  const isActive = (path) => location.pathname === path;
 
-    return () => {
-      window.removeEventListener("scroll", changeColor);
-    };
-  }, []);
+  const cartItemCount = state.cart.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
-    <nav
-      className={`sticky top-0 z-50 border-b border-neutral-200 text-black ${
-        color ? "bg-[#f8fafb]" : ""
-      }`}
-    >
-      <div className="container lg:px-28 mx-auto relative text-sm backdrop-blur-lg">
-        <div className="flex justify-between items-center py-6">
-          <Link
-            className="pl-5 lg:pl-0 text-2xl"
-            // onClick={(e) => {
-            //   e.preventDefault();
-            //   router.push("/");
-            //   onTransitionReady: slideInOut;
-            // }}
-            href="/"
-          >
-            {/* <img src='/' alt="Logo" /> */}
-            Author Name
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
+            <BookOpen className="w-8 h-8 text-amber-600" />
+            <span className="text-xl font-serif font-bold text-slate-800">
+              Joel Smith
+            </span>
           </Link>
-          <ul className="hidden lg:flex ml-14 space-x-12 -my-8 font-medium items-center">
-            {navItems.map((item, index) => (
-              <li key={index}>
-                <Link
-                  aria-current="page"
-                  className="cursor-pointer"
-                //   onClick={(e) => {
-                //     e.preventDefault();
-                //     router.push(item.href);
-                //     onTransitionReady: slideInOut;
-                //   }}
-                  href={item.href}
-                >
-                  {item.prop}
-                </Link>
-              </li>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item, key) => (
+              <Link
+                key={key}
+                href={item.href}
+                className={`text-sm font-medium transition-colors hover:text-amber-600 ${
+                  isActive(item.href) ? "text-amber-600" : "text-slate-600"
+                }`}
+              >
+                {item.prop}
+              </Link>
             ))}
-          </ul>
-          <div className="lg:hidden md:flex justify-end pr-5 pt-2">
-            <button onClick={toggleNavbar} aria-label="Toggle navigation">
-              {MobileDrawerOpen ? <X /> : <Menu />}
-            </button>
+
+            <Link href="/pages/cart" className="relative">
+              <Button
+                variant="outline"
+                size="icon"
+                className="relative border-slate-300 hover:bg-amber-50"
+              >
+                <ShoppingCart className="w-4 h-4" />
+                {cartItemCount > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-amber-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                    {cartItemCount}
+                  </span>
+                )}
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-2 rounded-md hover:bg-slate-100 transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <X className="w-6 h-6 text-slate-600" />
+            ) : (
+              <Menu className="w-6 h-6 text-slate-600" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isOpen
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+          }`}
+        >
+          <div className="py-4 space-y-4">
+            {navItems.map((item, key) => (
+              <Link
+                key={key}
+                href={item.href}
+                className={`block text-sm font-medium transition-colors hover:text-amber-600 py-2 ${
+                  isActive(item.href) ? "text-amber-600" : "text-slate-600"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.prop}
+              </Link>
+            ))}
           </div>
         </div>
-        {MobileDrawerOpen && (
-          <div className="fixed right-0 flex flex-col justify-center items-center lg:hidden w-full p-5 text-center bg-[#f8fafb]">
-            <ul>
-              {navItems.map((item, index) => (
-                <li key={index} className="py-2">
-                  <Link aria-current="page" href={item.href}>
-                    {item.prop}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
+      <BookPopup/>
     </nav>
   );
 }

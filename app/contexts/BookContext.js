@@ -6,8 +6,8 @@ const initialState = {
   cart: [],
   currentBook: {
     id: '1',
-    title: 'Whispers in the Attic',
-    author: 'Margaret Thorne',
+    title: 'Some Observations and Opinions',
+    author: 'Joel Smith',
     image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=500&fit=crop',
     price: 24.99
   }
@@ -26,7 +26,7 @@ function bookReducer(state, action) {
           ...state,
           cart: state.cart.map(item =>
             item.id === action.payload.id
-              ? { ...item, quantity: item.quantity + 1 }
+              ? { ...item, quantity: item.quantity + 1 } 
               : item
           )
         };

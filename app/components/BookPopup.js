@@ -1,5 +1,10 @@
-'use client'
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+"use client";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "../components/ui/dialog";
 import { useBook } from "@/app/contexts/BookContext";
 import { ShoppingCart } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
@@ -20,7 +25,7 @@ export function BookPopup() {
 
   return (
     <Dialog open={state.showBookPopup} onOpenChange={closeBookPopup}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md bg-white">
         <DialogHeader>
           <DialogTitle className="text-2xl font-serif text-slate-800">
             Get the Book
@@ -28,8 +33,8 @@ export function BookPopup() {
         </DialogHeader>
         <div className="flex flex-col items-center space-y-6 p-4">
           <div className="w-48 h-64 rounded-lg overflow-hidden shadow-lg">
-            <img 
-              src={state.currentBook.image} 
+            <img
+              src={state.currentBook.image}
               alt={state.currentBook.title}
               className="w-full h-full object-cover"
             />
@@ -45,7 +50,7 @@ export function BookPopup() {
               ${state.currentBook.price}
             </p>
           </div>
-          <Button 
+          <Button
             onClick={handleAddToCart}
             className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg w-full"
           >

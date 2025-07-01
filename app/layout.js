@@ -1,4 +1,4 @@
-import { Footer } from "./components/Footer";
+
 import Navbar from "./components/Navbar";
 import { BookProvider } from "./contexts/BookContext";
 import "./globals.css";
@@ -16,9 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Navbar />
-        <BookProvider>{children}</BookProvider>
-        <Footer />
+        <BookProvider>
+          <Navbar/>
+          {children}
+        </BookProvider>
       </body>
     </html>
   );
