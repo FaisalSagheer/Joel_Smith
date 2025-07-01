@@ -7,11 +7,9 @@ import { Toaster } from "./components/ui/toaster";
 function Page() {
   return (
     <>
-      <BookProvider>
           <Sonner/>
           <Toaster />
           <Website />
-      </BookProvider>
     </>
   );
 }

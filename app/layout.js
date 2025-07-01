@@ -1,5 +1,4 @@
 
-import Navbar from "./components/Navbar";
 import { BookProvider } from "./contexts/BookContext";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -17,7 +16,6 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body>
         <BookProvider>
-          <Navbar/>
           {children}
         </BookProvider>
       </body>

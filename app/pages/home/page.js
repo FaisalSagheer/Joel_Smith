@@ -8,6 +8,7 @@ import { AboutAuthor } from "@/app/components/AboutAuthor";
 import Testimonials from "@/app/components/Testimonials";
 import { BookPopup } from "@/app/components/BookPopup";
 import { BlogSection } from "@/app/components/Blog";
+import Navbar from "@/app/components/Navbar";
 
 function Home() {
   const observerRef = useRef(null);
@@ -50,6 +51,7 @@ function Home() {
 
   return (
     <>
+      <Navbar />
       <Hero />
       <div className="fade-in-on-scroll">
         <AboutBook />
@@ -69,7 +71,6 @@ function Home() {
       <div className="fade-in-on-scroll">
         <NewsLetter />
       </div>
-      <BookPopup />
     </>
   );
 }

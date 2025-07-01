@@ -23,7 +23,7 @@ const Cart = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-    
+    <Navbar/>
       <div className="pt-30">
         <div className="container mx-auto px-6">
           <div className="max-w-8xl mx-auto">
