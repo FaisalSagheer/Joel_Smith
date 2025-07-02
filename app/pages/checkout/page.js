@@ -9,6 +9,7 @@ import Navbar from "@/app/components/Navbar";
 import { useBook } from "@/app/contexts/BookContext";
 import { useState } from "react";
 import Link from "next/link";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/app/components/ui/select";
 
 const Checkout = () => {
   const { state } = useBook();
@@ -176,41 +177,59 @@ const Checkout = () => {
                   </CardContent>
                 </Card>
 
-                <Card>
+               <Card>
                   <CardHeader>
-                    <CardTitle className="text-xl font-serif">Payment Information</CardTitle>
+                    <CardTitle className="text-xl font-serif">Payment Methods</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <Input
-                      name="nameOnCard"
-                      placeholder="Name on card"
-                    //   value={formData.nameOnCard}
-                    //   onChange={handleInputChange}
-                      required
-                    />
-                    <Input
-                      name="cardNumber"
-                      placeholder="Card number"
-                    //   value={formData.cardNumber}
-                    //   onChange={handleInputChange}
-                      required
-                    />
-                    <div className="grid grid-cols-2 gap-4">
-                      <Input
-                        name="expiryDate"
-                        placeholder="MM/YY"
-                        // value={formData.expiryDate}
-                        // onChange={handleInputChange}
-                        required
-                      />
-                      <Input
-                        name="cvv"
-                        placeholder="CVV"
-                        // value={formData.cvv}
-                        // onChange={handleInputChange}
-                        required
-                      />
-                    </div>
+                    <Select onValueChange={(value) => handleSelectChange('paymentMethod', value)}>
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select payment method" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-white border border-gray-200 shadow-lg z-50">
+                        <SelectItem value="credit-card">Credit Card</SelectItem>
+                        <SelectItem value="debit-card">Debit Card</SelectItem>
+                        <SelectItem value="paypal">PayPal</SelectItem>
+                        <SelectItem value="apple-pay">Apple Pay</SelectItem>
+                        <SelectItem value="google-pay">Google Pay</SelectItem>
+                        <SelectItem value="cash-on-delivery">Cash on Delivery</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    
+                    {(formData.paymentMethod === 'credit-card' || formData.paymentMethod === 'debit-card') && (
+                      <>
+                        <Input
+                          name="nameOnCard"
+                          placeholder="Name on card"
+                        //   value={formData.nameOnCard}
+                        //   onChange={handleInputChange}
+                          required
+                        />
+                        <Input
+                          name="cardNumber"
+                          placeholder="Card number"
+                        //   value={formData.cardNumber}
+                        //   onChange={handleInputChange}
+                          required
+                        />
+                        <div className="grid grid-cols-2 gap-4">
+                          <Input
+                            name="expiryDate"
+                            placeholder="MM/YY"
+                            // value={formData.expiryDate}
+                            // onChange={handleInputChange}
+                            required
+                          />
+                          <Input
+                            name="cvv"
+                            placeholder="CVV"
+                            // value={formData.cvv}
+                            // onChange={handleInputChange}
+                            required
+                          />
+                        </div>
+                      </>
+                    )}
                   </CardContent>
                 </Card>
               </div>
