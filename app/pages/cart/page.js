@@ -1,6 +1,5 @@
 
 'use client'
-import { Footer } from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import { Button } from "@/app/components/ui/button";
 import { useBook } from "@/app/contexts/BookContext";
@@ -96,7 +95,9 @@ const Cart = () => {
                     </span>
                   </div>
                   <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3">
+                    <Link href="/pages/checkout">
                     Proceed to Checkout
+                    </Link>
                   </Button>
                 </div>
               </div>
