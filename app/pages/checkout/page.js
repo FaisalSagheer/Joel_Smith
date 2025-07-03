@@ -127,7 +127,7 @@ const Checkout = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <div className="pt-20 pb-16">
+      <div className="pt-35 pb-16">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-4xl font-serif font-bold text-slate-800 mb-8">
@@ -229,11 +229,11 @@ const Checkout = () => {
                         <SelectValue placeholder="Select payment method" />
                       </SelectTrigger>
                       <SelectContent className="bg-white border border-gray-200 shadow-lg z-50">
-                        <SelectItem value="credit-card">Credit Card</SelectItem>
+                        {/* <SelectItem value="credit-card">Credit Card</SelectItem>
                         <SelectItem value="debit-card">Debit Card</SelectItem>
                         <SelectItem value="paypal">PayPal</SelectItem>
                         <SelectItem value="apple-pay">Apple Pay</SelectItem>
-                        <SelectItem value="google-pay">Google Pay</SelectItem>
+                        <SelectItem value="google-pay">Google Pay</SelectItem> */}
                         <SelectItem value="cash-on-delivery">
                           Cash on Delivery
                         </SelectItem>

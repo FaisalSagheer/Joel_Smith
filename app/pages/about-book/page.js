@@ -4,16 +4,55 @@ import { Button } from "@/app/components/ui/button";
 import { Card, CardContent } from "@/app/components/ui/card";
 import { useBook } from "@/app/contexts/BookContext";
 import ReactLenis from "@studio-freight/react-lenis";
+import { useEffect, useRef } from "react";
 
 const AboutBook = () => {
   const { openBookPopup } = useBook();
+    const observerRef = useRef(null);
+  
+    useEffect(() => {
+      observerRef.current = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fade-in");
+              entry.target.classList.remove("opacity-0", "translate-y-8");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        }
+      );
+  
+      // Observe all fade-in elements
+      const fadeElements = document.querySelectorAll(".fade-in-on-scroll");
+      fadeElements.forEach((el) => {
+        el.classList.add(
+          "opacity-0",
+          "translate-y-8",
+          "transition-all",
+          "duration-700",
+          "ease-out"
+        );
+        observerRef.current.observe(el);
+      });
+  
+      return () => {
+        if (observerRef.current) {
+          observerRef.current.disconnect();
+        }
+      };
+    }, []);
+  
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       <ReactLenis root>
         <div>
           {/* Hero Section */}
-          <section className="py-36 bg-gradient-to-br from-slate-50 to-white">
+          <section className="fade-in-on-scroll py-36 bg-gradient-to-br from-slate-50 to-white">
             <div className="container mx-auto px-6">
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -75,7 +114,7 @@ const AboutBook = () => {
           </section>
 
           {/* Synopsis */}
-          <section className="py-16">
+          <section className="fade-in-on-scroll py-16">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-3xl font-serif font-bold text-slate-800 mb-8">
@@ -165,7 +204,7 @@ const AboutBook = () => {
           </section>
 
           {/* Reviews */}
-          <section className="py-16 bg-slate-50">
+          <section className="fade-in-on-scroll py-16 bg-slate-50">
             <div className="container mx-auto px-6">
               <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl font-serif font-bold text-slate-800 mb-12 text-center">
@@ -238,7 +277,7 @@ const AboutBook = () => {
           </section>
 
           {/* Book Details */}
-          <section className="py-16">
+          <section className="fade-in-on-scroll py-16">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-3xl font-serif font-bold text-slate-800 mb-8">
@@ -297,7 +336,7 @@ const AboutBook = () => {
           </section>
 
           {/* Call to Action */}
-          <section className="py-16 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
+          <section className="fade-in-on-scroll py-16 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
             <div className="container mx-auto px-6 text-center">
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-4xl font-serif font-bold mb-6">
