@@ -8,6 +8,7 @@ import { useBook } from "@/app/contexts/BookContext";
 import { useToast } from "@/app/hooks/use-toast";
 import { Search, ShoppingCart, Star } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
+import ReactLenis from "@studio-freight/react-lenis";
 
 const books = [
   {
@@ -117,6 +118,7 @@ const Shop = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
+<ReactLenis root>
       <div className="pt-30 pb-16">
         <div className="container mx-auto px-6">
           {/* Header */}
@@ -245,6 +247,8 @@ const Shop = () => {
           )}
         </div>
       </div>
+</ReactLenis>
+
     </div>
   );
 };
