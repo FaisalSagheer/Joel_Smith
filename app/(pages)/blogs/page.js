@@ -3,9 +3,7 @@
 import { BlogSection } from "@/app/components/Blog";
 import { Footer } from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
-import { FullblogPosts } from "@/app/constant";
 import ReactLenis from "@studio-freight/react-lenis";
-import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const BlogsPage = () => {
