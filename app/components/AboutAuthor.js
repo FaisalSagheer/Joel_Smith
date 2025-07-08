@@ -84,7 +84,7 @@ export function AboutAuthor() {
                       <span className="text-slate-700">Cat Mom</span>
                     </div> */}
                 <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3">
-                  <Link href="/pages/about-author">Learn More</Link>
+                  <Link href="/about-author">Learn More</Link>
                 </Button>
               </div>
             </div>

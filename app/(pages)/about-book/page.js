@@ -26,7 +26,7 @@ const AboutBook = () => {
         }
       );
   
-      // Observe all fade-in elements
+      
       const fadeElements = document.querySelectorAll(".fade-in-on-scroll");
       fadeElements.forEach((el) => {
         el.classList.add(
@@ -52,7 +52,7 @@ const AboutBook = () => {
       <ReactLenis root>
         <div>
           {/* Hero Section */}
-          <section className="fade-in-on-scroll py-36 bg-gradient-to-br from-slate-50 to-white">
+          <section className="fade-in-on-scroll py-38 bg-gradient-to-br from-slate-50 to-white">
             <div className="container mx-auto px-6">
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">

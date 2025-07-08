@@ -3,7 +3,9 @@
 import { BlogSection } from "@/app/components/Blog";
 import { Footer } from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
+import { FullblogPosts } from "@/app/constant";
 import ReactLenis from "@studio-freight/react-lenis";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const BlogsPage = () => {
@@ -25,7 +27,6 @@ const BlogsPage = () => {
         }
       );
   
-      // Observe all fade-in elements
       const fadeElements = document.querySelectorAll(".fade-in-on-scroll");
       fadeElements.forEach((el) => {
         el.classList.add(
@@ -49,9 +50,9 @@ const BlogsPage = () => {
     <div className="min-h-screen">
       <Navbar />
       <ReactLenis root>
-        <div className="pt-30 pb-16 fade-in-on-scroll">
-          {/* <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
+        <div className="pt-34 pb-16 fade-in-on-scroll">
+          <div className="container mx-auto px-6 -mb-16">
+            <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-4">
                 Our Blog
               </h1>
@@ -62,10 +63,20 @@ const BlogsPage = () => {
                 world of storytelling.
               </p>
             </div>
-          </div> */}
+          </div>
 
+{/* {
+  FullblogPosts.map((item)=>
+  <li key={item.slug}>
+   <Link href={`/blogs/${item.slug}`}>
+   {item.title}
+   </Link>
+  </li>
+  )
+} */}
           <BlogSection
-            title="All Blog Posts"
+            title=""
+            description=""
             showViewAll={false}
             className="bg-white"
           />

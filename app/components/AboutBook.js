@@ -85,7 +85,7 @@ function AboutBook() {
                   variant="outline"
                   className="border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white"
                 >
-                  <Link href="/pages/about-book">
+                  <Link href="/about-book">
                   Learn More
                   </Link>
                 </Button>

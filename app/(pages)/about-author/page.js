@@ -25,7 +25,7 @@ const AboutAuthor = () => {
       }
     );
 
-    // Observe all fade-in elements
+
     const fadeElements = document.querySelectorAll(".fade-in-on-scroll");
     fadeElements.forEach((el) => {
       el.classList.add(
@@ -50,7 +50,7 @@ const AboutAuthor = () => {
       <Navbar />
       <ReactLenis root>
         <div>
-          <section className="fade-in-on-scroll relative py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-slate-100 overflow-hidden">
+          <section className="fade-in-on-scroll relative py-36 bg-gradient-to-br from-amber-50 via-orange-50 to-slate-100 overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-20 left-10 w-32 h-32 bg-amber-300 rounded-full blur-3xl"></div>
               <div className="absolute bottom-20 right-10 w-40 h-40 bg-orange-300 rounded-full blur-3xl"></div>
@@ -132,7 +132,7 @@ const AboutAuthor = () => {
           </section>
 
           {/* Story Section */}
-          <section className="fade-in-on-scroll py-20 bg-white">
+          <section className="fade-in-on-scroll py-26 bg-white">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl font-serif text-center text-slate-800 mb-16">
@@ -184,7 +184,7 @@ const AboutAuthor = () => {
           </section>
 
           {/* Awards Section with Creative Design */}
-          <section className="fade-in-on-scroll py-20 bg-gradient-to-r from-slate-50 to-amber-50">
+          {/* <section className="fade-in-on-scroll py-20 bg-gradient-to-r from-slate-50 to-amber-50">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-4xl font-serif text-slate-800 mb-4">
@@ -242,7 +242,7 @@ const AboutAuthor = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* Quote Section */}
           <section className="fade-in-on-scroll py-20 bg-slate-800 text-white relative overflow-hidden">

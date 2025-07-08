@@ -95,7 +95,7 @@ const Cart = () => {
                     </span>
                   </div>
                   <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3">
-                    <Link href="/pages/checkout">
+                    <Link href="/checkout">
                     Proceed to Checkout
                     </Link>
                   </Button>

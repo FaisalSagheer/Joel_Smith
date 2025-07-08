@@ -119,7 +119,7 @@ const Shop = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
 <ReactLenis root>
-      <div className="pt-30 pb-16">
+      <div className="pt-34 pb-16">
         <div className="container mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-12">

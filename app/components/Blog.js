@@ -8,12 +8,13 @@ import {
 import { Button } from "@/app/components/ui/button";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { blogPosts } from "../constant";
+import { briefblogPosts } from "../constant";
 
 
 
 export function BlogSection({
   title = "Latest from the Blog",
+  description = "Insights, stories, and thoughts on writing, creativity, and the literary world.",
   showViewAll = true,
   className = "",
 }) {
@@ -25,15 +26,14 @@ export function BlogSection({
             {title}
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Insights, stories, and thoughts on writing, creativity, and the
-            literary world.
+            {description}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {blogPosts.map((post) => (
-            <Card
-              key={post.id}
+          {briefblogPosts.map((post) => (
+           <Link key={post.slug} href={`/blog-posts/${post.slug}`}>
+           <Card
               className="group hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               <div className="relative overflow-hidden">
@@ -78,13 +78,15 @@ export function BlogSection({
                 </Button>
               </CardContent>
             </Card>
+           </Link>
+
           ))}
         </div>
 
         {showViewAll && (
           <div className="text-center">
             <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3">
-              <Link href="/pages/blog">View All Blog Posts</Link>
+              <Link href="/blogs">View All Blog Posts</Link>
             </Button>
           </div>
         )}

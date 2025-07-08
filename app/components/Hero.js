@@ -44,7 +44,7 @@ export default function Hero() {
                 >
                   Get the Book
                 </Button>
-                <Link href="/pages/about-book">
+                <Link href="/about-book">
                   <Button
                     variant="outline"
                     size="lg"

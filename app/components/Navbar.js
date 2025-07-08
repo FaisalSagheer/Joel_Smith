@@ -46,7 +46,7 @@ function Navbar() {
               </Link>
             ))}
 
-            <Link href="/pages/cart" className="relative">
+            <Link href="/cart" className="relative">
               <Button
                 variant="outline"
                 size="icon"
