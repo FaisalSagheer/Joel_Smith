@@ -9,18 +9,77 @@ import {
   PersonStanding,
   Square,
   SquareUserRound,
+  Mail,
+  Sparkles,
+  Gift,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function AboutAuthor() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 300);
+
+    const handleMouseMove = (e) => {
+      const rect = e.currentTarget?.getBoundingClientRect() || {
+        left: 0,
+        top: 0,
+        width: 1,
+        height: 1,
+      };
+      setMousePosition({
+        x: ((e.clientX - rect.left) / rect.width) * 100,
+        y: ((e.clientY - rect.top) / rect.height) * 100,
+      });
+    };
+
+    const section = document.querySelector(".newsletter-section");
+    section?.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      clearTimeout(timer);
+      section?.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
   return (
-    <section className="relative py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-slate-100 overflow-hidden">
+    <section className="newsletter-section relative py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-slate-100 overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-amber-300 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-orange-300 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-slate-300 rounded-full blur-2xl"></div>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-16 right-20 animate-bounce delay-200">
+          <Mail className="w-8 h-8 text-amber-400/30" />
+        </div>
+        <div className="absolute bottom-20 left-16 animate-bounce delay-400">
+          <Sparkles className="w-6 h-6 text-slate-400/40" />
+        </div>
+        <div className="absolute top-1/4 right-1/3 animate-bounce delay-600">
+          <Gift className="w-5 h-5 text-amber-500/30" />
+        </div>
+
+        {/* Interactive gradient orbs */}
+        <div
+          className="absolute w-80 h-80 rounded-full bg-gradient-to-r from-amber-300/15 to-orange-400/15 blur-3xl transition-transform duration-1500 ease-out"
+          style={{
+            transform: `translate(${mousePosition.x * 0.02}px, ${
+              mousePosition.y * 0.02
+            }px)`,
+            top: "10%",
+            left: "5%",
+          }}
+        ></div>
+        <div
+          className="absolute w-64 h-64 rounded-full bg-gradient-to-l from-slate-400/10 to-slate-600/10 blur-3xl transition-transform duration-2000 ease-out"
+          style={{
+            transform: `translate(${-mousePosition.x * 0.015}px, ${
+              mousePosition.y * 0.01
+            }px)`,
+            bottom: "15%",
+            right: "10%",
+          }}
+        ></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -40,6 +99,7 @@ export function AboutAuthor() {
                     className="w-full h-full object-cover"
                   />
 
+                </div>
                   {/* Floating icons */}
                   <div className="absolute -top-2 -right-2 bg-amber-500 text-white p-3 rounded-full shadow-lg animate-bounce">
                     <PenTool className="w-6 h-6" />
@@ -47,7 +107,6 @@ export function AboutAuthor() {
                   <div className="absolute -bottom-2 -left-2 bg-orange-500 text-white p-3 rounded-full shadow-lg animate-pulse">
                     <BookOpen className="w-6 h-6" />
                   </div>
-                </div>
               </div>
             </div>
 

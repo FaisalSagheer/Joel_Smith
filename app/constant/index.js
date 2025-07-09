@@ -9,6 +9,40 @@ export const navItems = [
   // { prop: "blog-posts", href: "/blog-posts" },
 ];
 
+export const authorInfo = {
+  name: "Joel Smith",
+  bio: {
+    intro: "Margaret Thorne spent fifteen years as a librarian in small New England towns before turning to writing full-time. Her love for old houses, family histories, and the stories that bind us together inspired her debut novel.",
+    personal: "When she's not writing, Margaret enjoys restoring antique furniture, tending to her garden, and exploring local historical societies. She currently lives in Vermont with her two cats and an ever-growing collection of vintage books.",
+    current: "Whispers in the Attic is her first novel, but she's already at work on her second book, another tale of family secrets set in the mountains of Vermont."
+  },
+  awards: [
+    "• Finalist, New England Book Award 2024",
+    "• Winner, Vermont Literary Prize 2023",
+    "• Featured in \"Best Debuts of the Year\" - BookRiot"
+  ],
+  image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop&crop=face",
+  alt: "Margaret Thorne, Author"
+};
+
+export const featuredBook = {
+  title: "Whispers in the Attic",
+  author: "Margaret Thorne",
+  description: {
+    intro: "Some Observations and Opinions is not your average collection of essays or memoir. It is an exploration of the human condition by an 83-year-old man who has seen decades of change, progress, regression, beauty, absurdity, and occasional grace.",
+    setting: "With his feet planted firmly on the deck of his self-built home in the rural Florida woods, Joel Aaron Smith reflects on everything from the nature of God to the state of modern America, from abstract painting to the personalities of cats and dogs."
+  },
+  review: {
+    quote: "A masterfully crafted debut that will stay with you long after the final page. Thorne has given us a story that's both intimate and universal.",
+    source: "Publishers Weekly"
+  },
+  purchaseLinks: [
+    { name: "Buy on Amazon", primary: true },
+    { name: "Barnes & Noble", primary: false },
+    { name: "Local Bookstore", primary: false }
+  ]
+};
+
 export const briefblogPosts = [
   {
     id: 1,
