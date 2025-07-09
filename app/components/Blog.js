@@ -32,9 +32,9 @@ export function BlogSection({
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {briefblogPosts.map((post,key) => (
-          //  <Link key={post.slug} 
-          //  href={`/blog-posts/${post.slug}`}
-          //  >
+           <Link key={post.slug} 
+           href={post.href}
+           >
            <Card key={key}
               className="group hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
@@ -80,7 +80,7 @@ export function BlogSection({
                 </Button>
               </CardContent>
             </Card>
-          //  </Link>
+          </Link>
 
           ))}
         </div>

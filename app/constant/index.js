@@ -55,6 +55,7 @@ export const briefblogPosts = [
     date: "March 15, 2024",
     readTime: "5 min read",
     category: "Writing Tips",
+    href:"/post-page1"
   },
   {
     id: 2,
@@ -67,6 +68,7 @@ export const briefblogPosts = [
     date: "March 10, 2024",
     readTime: "7 min read",
     category: "Inspiration",
+    href:"/post-page2"
   },
   {
     id: 3,
@@ -79,6 +81,7 @@ export const briefblogPosts = [
     date: "March 5, 2024",
     readTime: "10 min read",
     category: "Publishing",
+    href:"/post-page3"
   },
 ];
 
