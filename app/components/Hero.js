@@ -16,10 +16,9 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-white/20 rounded-full"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 pt-0 lg:pt-0 md:pt-30">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
             <div className="text-center lg:text-left">
               <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
                 Joel <span className="text-amber-400">Smith</span>

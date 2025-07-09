@@ -6,7 +6,7 @@ export const navItems = [
   { prop: "Shop", href: "/shop" },
   { prop: "Blogs", href: "/blogs" },
   { prop: "Contact", href: "/contact" },
-  { prop: "blog-posts", href: "/blog-posts" },
+  // { prop: "blog-posts", href: "/blog-posts" },
 ];
 
 export const briefblogPosts = [
