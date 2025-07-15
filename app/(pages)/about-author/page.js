@@ -2,8 +2,10 @@
 import { BlogSection } from "@/app/components/Blog";
 import { Footer } from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
+import { Button } from "@/app/components/ui/button";
 import ReactLenis from "@studio-freight/react-lenis";
 import { Award, BookOpen, Coffee, Heart, PenTool, MapPin } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const AboutAuthor = () => {
@@ -110,7 +112,7 @@ const AboutAuthor = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4">
-                      <div className="flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                      {/* <div className="flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                         <Coffee className="w-5 h-5 text-amber-600" />
                         <span className="text-slate-700">
                           Coffee Enthusiast
@@ -123,7 +125,16 @@ const AboutAuthor = () => {
                       <div className="flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                         <BookOpen className="w-5 h-5 text-blue-600" />
                         <span className="text-slate-700">Book Collector</span>
-                      </div>
+                      </div> */}
+                      <Button
+                      size="lg"
+                      className="bg-amber-600 hover:bg-amber-700 text-white px-8"
+                      // onClick={openBookPopup}
+                    >
+                      <Link href="https://www.amazon.com/OBSERVATIONS-OPINIONS-Aaron-Smith-PH-D-ebook/dp/B0CYVWJ1GQ/ref=sr_1_2?crid=16BWXOJY7NG4S&dib=eyJ2IjoiMSJ9.0FQ3-SxWlLSERrf0UCMTluDMTievvJbXTpzXAw80Q6rGjHj071QN20LucGBJIEps.unJpQiBAvcXzDnhimjaGeCAHvH5mOraBaJRA4141wug&dib_tag=se&keywords=Joel+Aaron+Smith&qid=1752593896&s=digital-text&sprefix=joel+aaron+smith+%2Cdigital-text%2C213&sr=1-2">
+                      Get the Book Now
+                      </Link>
+                    </Button>
                     </div>
                   </div>
                 </div>
@@ -251,11 +262,9 @@ const AboutAuthor = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
-              <div className="max-w-3xl mx-auto text-center">
+              <div className="max-w-4xl mx-auto text-center">
                 <blockquote className="text-2xl md:text-3xl font-serif italic leading-relaxed mb-8">
-                  "Every old house holds secrets, every family has stories
-                  waiting to be told. I simply listen to what the walls
-                  whisper."
+                  "In a world driven by trends, echo chambers, and superficial content, Some Observations and Opinions offers something rare: sincerity. Joel does not try to impress, persuade, or perform."
                 </blockquote>
                 <cite className="text-lg text-amber-300">— Joel Smith</cite>
               </div>

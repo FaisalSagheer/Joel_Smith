@@ -1,13 +1,15 @@
 "use client";
+import { Footer } from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import { Button } from "@/app/components/ui/button";
 import { Card, CardContent } from "@/app/components/ui/card";
-import { useBook } from "@/app/contexts/BookContext";
+// import { useBook } from "@/app/contexts/BookContext";
 import ReactLenis from "@studio-freight/react-lenis";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const AboutBook = () => {
-  const { openBookPopup } = useBook();
+  // const { openBookPopup } = useBook();
     const observerRef = useRef(null);
   
     useEffect(() => {
@@ -59,8 +61,13 @@ const AboutBook = () => {
                   {/* Book Cover */}
                   <div className="text-center lg:text-left">
                     <div className="relative inline-block">
-                      <div className="w-80 h-96 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                        <div className="p-8 h-full flex flex-col justify-between text-white">
+                      <div className="w-80 h-96 rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                       <img
+                      src="/assets/Joel-Cover.png"
+                      alt="Whispers in the Attic Book Cover"
+                      className="w-full h-full rounded-lg object-cover"
+                    />
+                        {/* <div className="p-8 h-full flex flex-col justify-between text-white">
                           <div>
                             <h3 className="text-2xl font-serif mb-4">
                               Some Observations and Opinions
@@ -75,7 +82,7 @@ const AboutBook = () => {
                               A Observation
                             </p>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -103,9 +110,11 @@ const AboutBook = () => {
                     <Button
                       size="lg"
                       className="bg-amber-600 hover:bg-amber-700 text-white px-8"
-                      onClick={openBookPopup}
+                      // onClick={openBookPopup}
                     >
+                      <Link href="https://www.amazon.com/OBSERVATIONS-OPINIONS-Aaron-Smith-PH-D-ebook/dp/B0CYVWJ1GQ/ref=sr_1_2?crid=16BWXOJY7NG4S&dib=eyJ2IjoiMSJ9.0FQ3-SxWlLSERrf0UCMTluDMTievvJbXTpzXAw80Q6rGjHj071QN20LucGBJIEps.unJpQiBAvcXzDnhimjaGeCAHvH5mOraBaJRA4141wug&dib_tag=se&keywords=Joel+Aaron+Smith&qid=1752593896&s=digital-text&sprefix=joel+aaron+smith+%2Cdigital-text%2C213&sr=1-2">
                       Get the Book Now
+                      </Link>
                     </Button>
                   </div>
                 </div>
@@ -336,7 +345,7 @@ const AboutBook = () => {
           </section>
 
           {/* Call to Action */}
-          <section className="fade-in-on-scroll py-16 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
+          {/* <section className="fade-in-on-scroll py-16 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
             <div className="container mx-auto px-6 text-center">
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-4xl font-serif font-bold mb-6">
@@ -348,12 +357,15 @@ const AboutBook = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
-                    size="lg"
-                    className="bg-amber-600 hover:bg-amber-700 text-white px-8"
-                    onClick={openBookPopup}
-                  >
-                    Get Your Copy Today
-                  </Button>
+                      size="lg"
+                      className="bg-amber-600 hover:bg-amber-700 text-white px-8"
+                      // onClick={openBookPopup}
+                    >
+                      <Link href="https://www.amazon.com/OBSERVATIONS-OPINIONS-Aaron-Smith-PH-D-ebook/dp/B0CYVWJ1GQ/ref=sr_1_2?crid=16BWXOJY7NG4S&dib=eyJ2IjoiMSJ9.0FQ3-SxWlLSERrf0UCMTluDMTievvJbXTpzXAw80Q6rGjHj071QN20LucGBJIEps.unJpQiBAvcXzDnhimjaGeCAHvH5mOraBaJRA4141wug&dib_tag=se&keywords=Joel+Aaron+Smith&qid=1752593896&s=digital-text&sprefix=joel+aaron+smith+%2Cdigital-text%2C213&sr=1-2">
+                      Get Your Copy Now
+                      </Link>
+                    </Button>
+
                   <Button
                     variant="outline"
                     size="lg"
@@ -364,7 +376,8 @@ const AboutBook = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
+          <Footer/>
         </div>
       </ReactLenis>
     </div>

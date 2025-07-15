@@ -8,14 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/app/components/ui/card";
-import { briefblogPosts, FullblogPosts } from "@/app/constant";
+import { ArticlesContentBrief, ArticlesContentDesc } from "@/app/constant";
 import ReactLenis from "@studio-freight/react-lenis";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
 function post() {
-  const relatedPosts = briefblogPosts
+  const relatedPosts = ArticlesContentBrief
     .filter((p) => p.id !== post.id)
     .slice(0, 2);
   return (
@@ -36,8 +36,8 @@ function post() {
               </Link>
             </div>
             <article className="max-w-4xl mx-auto">
-              {FullblogPosts.filter(
-                (slugs) => slugs.slug === "the-kind-of-books-i-write"
+              {ArticlesContentDesc.filter(
+                (slugs) => slugs.slug === "growing-old-without-apology–reflections-on-aging"
               ).map((post, key) => (
                 <div
                   className="relative mb-8 rounded-lg overflow-hidden"
@@ -72,12 +72,12 @@ function post() {
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    <p className="text-xl text-slate-600 leading-relaxed -mb-6">
+                    <p className="text-xl text-slate-600 leading-relaxed">
                       {post.excerpt}
                     </p>
                   </header>
                   <div
-                    className="prose prose-lg max-w-none mb-6"
+                    className="prose prose-lg max-w-none mb-12"
                     dangerouslySetInnerHTML={{ __html: post.content }}
                     style={{
                       color: "#475569",
@@ -106,7 +106,7 @@ function post() {
                   </div>
                 </CardContent>
               </Card>
-          {/* {relatedPosts.length > 0 && (
+          {relatedPosts.length > 0 && (
             <section>
               <h2 className="text-2xl font-serif font-bold text-slate-800 mb-6">
                 Related Posts
@@ -154,7 +154,7 @@ function post() {
                 ))}
               </div>
             </section>
-          )} */}
+          )}
             </article>
           </div>
         </div>

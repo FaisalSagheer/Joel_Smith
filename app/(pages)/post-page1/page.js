@@ -37,7 +37,7 @@ function post() {
             </div>
             <article className="max-w-4xl mx-auto">
               {FullblogPosts.filter(
-                (slugs) => slugs.slug === "art-of-character"
+                (slugs) => slugs.slug === "why-i-wrote-a-book"
               ).map((post, key) => (
                 <div
                   className="relative mb-8 rounded-lg overflow-hidden"
@@ -72,12 +72,12 @@ function post() {
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    <p className="text-xl text-slate-600 leading-relaxed">
+                    <p className="text-xl text-slate-600 leading-relaxed -mb-6">
                       {post.excerpt}
                     </p>
                   </header>
                   <div
-                    className="prose prose-lg max-w-none mb-12"
+                    className="prose prose-lg max-w-none mb-6"
                     dangerouslySetInnerHTML={{ __html: post.content }}
                     style={{
                       color: "#475569",
@@ -106,7 +106,7 @@ function post() {
                   </div>
                 </CardContent>
               </Card>
-          {relatedPosts.length > 0 && (
+          {/* {relatedPosts.length > 0 && (
             <section>
               <h2 className="text-2xl font-serif font-bold text-slate-800 mb-6">
                 Related Posts
@@ -154,7 +154,7 @@ function post() {
                 ))}
               </div>
             </section>
-          )}
+          )} */}
             </article>
           </div>
         </div>

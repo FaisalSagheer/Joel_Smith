@@ -15,7 +15,7 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-1 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="shadow-lg">
             <CardHeader>
@@ -36,7 +36,7 @@ export function Contact() {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          {/* <div className="space-y-8">
             <Card className="shadow-lg">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">Media Inquiries</h3>
@@ -77,7 +77,7 @@ export function Contact() {
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

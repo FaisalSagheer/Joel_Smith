@@ -109,9 +109,11 @@ export default function Hero() {
                 <Button 
                   size="lg" 
                   className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg font-semibold shadow-xl shadow-amber-600/20 hover:shadow-2xl hover:shadow-amber-600/30 hover:scale-105 transition-all duration-300 group"
-                  onClick={openBookPopup}
+                  // onClick={openBookPopup}
                 >
+                  <Link href="https://www.amazon.com/OBSERVATIONS-OPINIONS-Aaron-Smith-PH-D-ebook/dp/B0CYVWJ1GQ/ref=sr_1_2?crid=16BWXOJY7NG4S&dib=eyJ2IjoiMSJ9.0FQ3-SxWlLSERrf0UCMTluDMTievvJbXTpzXAw80Q6rGjHj071QN20LucGBJIEps.unJpQiBAvcXzDnhimjaGeCAHvH5mOraBaJRA4141wug&dib_tag=se&keywords=Joel+Aaron+Smith&qid=1752593896&s=digital-text&sprefix=joel+aaron+smith+%2Cdigital-text%2C213&sr=1-2">
                   <span>Get the Book</span>
+                  </Link>
                   <Sparkles className="w-4 h-4 ml-2 group-hover:animate-spin" />
                 </Button>
                 <Link href="/about-book">
@@ -131,9 +133,9 @@ export default function Hero() {
               <div className="relative group">
                 {/* Main book container with enhanced effects */}
                 <div className="relative">
-                  <div className="w-80 h-96 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500 hover:scale-105 group-hover:shadow-amber-400/20 group-hover:shadow-2xl">
+                  <div className="w-72 h-96 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500 hover:scale-105 group-hover:shadow-amber-400/20 group-hover:shadow-2xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=500&fit=crop" 
+                      src="/assets/Joel-Cover.png" 
                       alt="Whispers in the Attic Book Cover" 
                       className="w-full h-full rounded-lg object-cover"
                     />

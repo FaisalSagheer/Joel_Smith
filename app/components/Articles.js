@@ -8,18 +8,18 @@ import {
 import { Button } from "@/app/components/ui/button";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { briefblogPosts } from "../constant";
+import { ArticlesContent, ArticlesContentBrief, briefblogPosts } from "../constant";
 
 
 
-export function BlogSection({
-  title = "Blogs & Articles",
+export function Articles({
+  title = "Articles",
   description = "Insights, stories, and thoughts on writing, creativity, and the literary world.",
   showViewAll = true,
   className = "",
 }) {
   return (
-    <section className={`py-16 ${className}`}>
+    <section className={`${className}`}>
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-4">
@@ -30,8 +30,8 @@ export function BlogSection({
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12 px-50">
-          {briefblogPosts.map((post,key) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {ArticlesContentBrief.map((post,key) => (
            <Link key={post.slug} 
            href={post.href}
            >

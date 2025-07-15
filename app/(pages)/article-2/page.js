@@ -8,14 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/app/components/ui/card";
-import { briefblogPosts, FullblogPosts } from "@/app/constant";
+import { ArticlesContentBrief, ArticlesContentDesc } from "@/app/constant";
 import ReactLenis from "@studio-freight/react-lenis";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
 function post() {
-  const relatedPosts = briefblogPosts
+  const relatedPosts = ArticlesContentBrief
     .filter((p) => p.id !== post.id)
     .slice(0, 2);
   return (
@@ -36,8 +36,8 @@ function post() {
               </Link>
             </div>
             <article className="max-w-4xl mx-auto">
-              {FullblogPosts.filter(
-                (slugs) => slugs.slug === "publishing-journey"
+              {ArticlesContentDesc.filter(
+                (slugs) => slugs.slug === "abstract-art-and-the-act-of-letting-go"
               ).map((post, key) => (
                 <div
                   className="relative mb-8 rounded-lg overflow-hidden"
