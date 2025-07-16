@@ -15,9 +15,6 @@ import Link from "next/link";
 import React from "react";
 
 function post() {
-  const relatedPosts = briefblogPosts
-    .filter((p) => p.id !== post.id)
-    .slice(0, 2);
   return (
     <>
       <Navbar />

@@ -1,5 +1,5 @@
 "use client";
-import { BlogSection } from "@/app/components/Blog";
+import { BlogSection } from "@/app/(pages)/blogs/Blog";
 import { Footer } from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import { Button } from "@/app/components/ui/button";
@@ -61,11 +61,9 @@ const AboutAuthor = () => {
 
             <div className="container mx-auto px-6 relative z-10">
               <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
-                  {/* Author Photo with Creative Frame */}
-                  <div className="text-center lg:text-left">
+                <div className="grid lg:grid-cols-1 gap-16 items-center justify-center">
+                  {/* <div className="text-center lg:text-left">
                     <div className="relative inline-block group">
-                      {/* Decorative rings */}
                       <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                       <div className="absolute -inset-2 bg-gradient-to-r from-slate-200 to-slate-300 rounded-full opacity-40"></div>
 
@@ -84,7 +82,7 @@ const AboutAuthor = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* About Content with Creative Typography */}
                   <div className="space-y-8">
@@ -97,7 +95,7 @@ const AboutAuthor = () => {
                       </h1>
                       <div className="flex items-center space-x-2 text-slate-600">
                         <MapPin className="w-5 h-5" />
-                        <span className="text-lg">Vermont, USA</span>
+                        <span className="text-lg">Chicago, USA</span>
                       </div>
                     </div>
 
@@ -111,7 +109,7 @@ const AboutAuthor = () => {
                       but for the simple act of honest communication.{" "}
                     </p>
 
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex flex-wrap gap-4 justify-center lg:justify-end">
                       {/* <div className="flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                         <Coffee className="w-5 h-5 text-amber-600" />
                         <span className="text-slate-700">
@@ -127,8 +125,8 @@ const AboutAuthor = () => {
                         <span className="text-slate-700">Book Collector</span>
                       </div> */}
                       <Button
-                      size="lg"
-                      className="bg-amber-600 hover:bg-amber-700 text-white px-8"
+                      size="default"
+                      className="bg-amber-600 hover:bg-amber-700 text-white px-8 lg:mr-12"
                       // onClick={openBookPopup}
                     >
                       <Link href="https://www.amazon.com/OBSERVATIONS-OPINIONS-Aaron-Smith-PH-D-ebook/dp/B0CYVWJ1GQ/ref=sr_1_2?crid=16BWXOJY7NG4S&dib=eyJ2IjoiMSJ9.0FQ3-SxWlLSERrf0UCMTluDMTievvJbXTpzXAw80Q6rGjHj071QN20LucGBJIEps.unJpQiBAvcXzDnhimjaGeCAHvH5mOraBaJRA4141wug&dib_tag=se&keywords=Joel+Aaron+Smith&qid=1752593896&s=digital-text&sprefix=joel+aaron+smith+%2Cdigital-text%2C213&sr=1-2">
