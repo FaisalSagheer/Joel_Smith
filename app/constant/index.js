@@ -1,8 +1,8 @@
 "use client";
 
 export const navItems = [
-  { prop: "Author", href: "/about-author" },
-  { prop: "About Book", href: "/about-book" },
+  { prop: "About The Author", href: "/about-author" },
+  { prop: "About The Book", href: "/about-book" },
   // { prop: "Shop", href: "/shop" },
   { prop: "Blogs & Articles", href: "/blogs" },
   { prop: "Contact", href: "/contact" },

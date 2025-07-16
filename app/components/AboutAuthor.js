@@ -47,7 +47,6 @@ export function AboutAuthor() {
   }, []);
   return (
     <section className="newsletter-section relative py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-slate-100 overflow-hidden">
-      {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-16 right-20 animate-bounce delay-200">
           <Mail className="w-8 h-8 text-amber-400/30" />
@@ -84,11 +83,9 @@ export function AboutAuthor() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Author Photo with Creative Frame */}
-            <div className="text-center lg:text-left">
+          <div className="grid lg:grid-cols-1 gap-16 items-center">
+            {/* <div className="text-center lg:text-left">
               <div className="relative inline-block group">
-                {/* Decorative rings */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-slate-200 to-slate-300 rounded-full opacity-40"></div>
 
@@ -100,7 +97,6 @@ export function AboutAuthor() {
                   />
 
                 </div>
-                  {/* Floating icons */}
                   <div className="absolute -top-2 -right-2 bg-amber-500 text-white p-3 rounded-full shadow-lg animate-bounce">
                     <PenTool className="w-6 h-6" />
                   </div>
@@ -108,7 +104,7 @@ export function AboutAuthor() {
                     <BookOpen className="w-6 h-6" />
                   </div>
               </div>
-            </div>
+            </div> */}
 
             {/* About Content with Creative Typography */}
             <div className="space-y-8">
@@ -121,7 +117,7 @@ export function AboutAuthor() {
                 </h1>
                 <div className="flex items-center space-x-2 text-slate-600">
                   <MapPin className="w-5 h-5" />
-                  <span className="text-lg">Vermont, USA</span>
+                  <span className="text-lg">Chicago, USA</span>
                 </div>
               </div>
 
@@ -130,10 +126,10 @@ export function AboutAuthor() {
                 regards titles with skepticism. Born in Chicago and shaped by
                 liberal arts, military service, abstract art, teaching, and
                 relentless introspection, Joel now lives in the woods of
-                Florida.{" "}
+                Florida.There, he continues to write, paint, reflect, and share his unique voice with the world, not for fame, but for the simple act of honest communication.{" "}
               </p>
 
-              <div className="flex flex-wrap gap-4 justify-end">
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-end mr-10">
                 {/* <div className="flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                       <Coffee className="w-5 h-5 text-amber-600" />
                       <span className="text-slate-700">Coffee Enthusiast</span>
