@@ -15,7 +15,6 @@ import { ArticlesContent, ArticlesContentBrief, briefblogPosts } from "../consta
 export function Articles({
   title = "Articles",
   description = "Insights, stories, and thoughts on writing, creativity, and the literary world.",
-  showViewAll = true,
   className = "",
 }) {
   return (
@@ -85,13 +84,7 @@ export function Articles({
           ))}
         </div>
 
-        {showViewAll && (
-          <div className="text-center">
-            <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3">
-              <Link href="/blogs">View All Blog Posts</Link>
-            </Button>
-          </div>
-        )}
+        
       </div>
     </section>
   );
