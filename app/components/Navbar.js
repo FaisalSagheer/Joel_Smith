@@ -11,14 +11,14 @@ import { BookPopup } from "./BookPopup";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = usePathname();
-  const { state, openBookPopup } = useBook();
+  // const { state, openBookPopup } = useBook();
 
   const isActive = (path) => location.pathname === path;
 
-  const cartItemCount = state.cart.reduce(
-    (total, item) => total + item.quantity,
-    0
-  );
+  // const cartItemCount = state.cart.reduce(
+  //   (total, item) => total + item.quantity,
+  //   0
+  // );
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
@@ -46,7 +46,7 @@ function Navbar() {
               </Link>
             ))}
 
-            <Link href="/cart" className="relative">
+            {/* <Link href="/cart" className="relative">
               <Button
                 variant="outline"
                 size="icon"
@@ -59,7 +59,7 @@ function Navbar() {
                   </span>
                 )}
               </Button>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile menu button */}
@@ -100,7 +100,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <BookPopup/>
+      {/* <BookPopup/> */}
     </nav>
   );
 }
