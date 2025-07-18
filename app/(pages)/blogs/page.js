@@ -64,15 +64,6 @@ const BlogsPage = () => {
             </div>
           </div>
 
-          {/* {
-  FullblogPosts.map((item)=>
-  <li key={item.slug}>
-   <Link href={`/blogs/${item.slug}`}>
-   {item.title}
-   </Link>
-  </li>
-  )
-} */}
           <BlogSection
             title=""
             description=""

@@ -69,9 +69,9 @@ function Home() {
       <div className="fade-in-on-scroll">
         <BlogSection />
       </div>
-      <div className="fade-in-on-scroll">
+      {/* <div className="fade-in-on-scroll">
         <NewsLetter />
-      </div>
+      </div> */}
       <Footer/>
     </>
   );
