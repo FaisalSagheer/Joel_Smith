@@ -38,8 +38,8 @@ function post() {
             </div>
             <article className="max-w-4xl mx-auto">
               {ArticlesContent.filter(
-                (slugs) => slugs.slug === "growing-old-without-apology–reflections-on-aging"
-              ).map((post, key) => 
+                (slugs) => slugs.slug === "politics-faith-and-the-quiet-space-in-between"
+              ).map((post, key) =>
                <Post posts={post} key={key}/>
               )}
           {relatedPosts.length > 0 && (

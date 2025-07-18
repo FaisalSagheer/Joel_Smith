@@ -86,6 +86,26 @@ function Post({ posts }) {
                   </div>
                 </CardContent>
               </Card>
+              {/* <Card className="mb-12 bg-slate-50">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center text-white font-serif text-2xl font-bold">
+                      J
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
+                        Joel Smith
+                      </h3>
+                      <p className="text-slate-600">
+                        Joel is a debut novelist with a passion for storytelling
+                        and character development. His work explores themes of
+                        human connection, resilience, and the power of stories
+                        to transform lives.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card> */}
               {/* {relatedPosts.length > 0 && (
             <section>
               <h2 className="text-2xl font-serif font-bold text-slate-800 mb-6">

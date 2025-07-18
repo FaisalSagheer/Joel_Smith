@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/app/components/ui/card";
 import Post from "@/app/components/ui/post";
-import { ArticlesContent, ArticlesContentBrief, ArticlesContentDesc } from "@/app/constant";
+import { ArticlesContent} from "@/app/constant";
 import ReactLenis from "@studio-freight/react-lenis";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Link from "next/link";
@@ -38,8 +38,8 @@ function post() {
             </div>
             <article className="max-w-4xl mx-auto">
               {ArticlesContent.filter(
-                (slugs) => slugs.slug === "growing-old-without-apology–reflections-on-aging"
-              ).map((post, key) => 
+                (slugs) => slugs.slug === "writing-without-a-blueprint-the-joy-of-unstructured-thought"
+              ).map((post, key) =>
                <Post posts={post} key={key}/>
               )}
           {relatedPosts.length > 0 && (
