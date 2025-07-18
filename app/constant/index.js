@@ -97,6 +97,7 @@ export const FullblogPosts = [
     id: 1,
     title: "Why I Wrote a Book at 83 (And Why You Should Read It)",
     slug: "why-i-wrote-a-book",
+    href:"post-page1",
     content: `
       <p>At 83, people expect you to slow down, stay quiet, or stick to bingo. But I believe aging isn't the end of expression, it's the peak of perspective. After decades of living, teaching, painting, raising eyebrows, and asking too many questions, I found myself on my back porch in rural Florida, surrounded by trees, birds, and the kind of stillness that makes you wonder: what if I tried to write it all down?</p>
       
@@ -121,6 +122,7 @@ export const FullblogPosts = [
     id: 2,
     title: "The Kind of Books I Write",
     slug: "the-kind-of-books-i-write",
+    href:"post-page2",
     content: `
       <p>You won't find my books under “bestsellers” at the airport. They don’t have a three-step plan to improve your life. They aren’t thrillers. And I’m not trying to “build a brand.”</p>
       
@@ -132,8 +134,8 @@ export const FullblogPosts = [
       <p>If you're tired of polished platitudes and just want a voice that feels real, a little cranky, a little curious, and always looking for the truth behind the noise, then I invite you to read my work.</p>
       <p>You don’t have to agree with me. You just have to listen.</p>
     `,
-    // excerpt:
-    //   "Learn how to transform ordinary experiences into extraordinary stories that captivate your audience.",
+    excerpt:
+      "You won't find my books under “bestsellers” at the airport. They don’t have a three-step plan to improve your life. They aren’t thrillers. And I’m not trying to “build a brand.”",
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop",
     date: "March 10, 2024",
@@ -141,36 +143,7 @@ export const FullblogPosts = [
     category: "Inspiration",
     author: "Joel Smith",
   },
-  {
-    id: 3,
-    title: "The Publishing Journey: What to Expect",
-    slug: "publishing-journey",
-    content: `
-      <p>The path to publication can be both exciting and daunting. Having recently navigated this journey myself, I want to share some insights that might help aspiring authors.</p>
-      
-      <h2>Preparing Your Manuscript</h2>
-      <p>Before you even think about querying agents or publishers, make sure your manuscript is the best it can be. This means multiple rounds of self-editing, beta readers, and possibly professional editing.</p>
-      
-      <h2>Finding the Right Agent</h2>
-      <p>A good literary agent can be your greatest ally in the publishing world. Research agents who represent your genre and follow their submission guidelines to the letter.</p>
-      
-      <h2>The Waiting Game</h2>
-      <p>Publishing involves a lot of waiting. Rejections are part of the process, and they don't reflect the quality of your work. Persistence is key.</p>
-      
-      <h2>Building Your Platform</h2>
-      <p>Start building your author platform early. Social media, a website, and connecting with other writers can all help when it comes time to promote your book.</p>
-      
-      <p>Remember, every published author was once where you are now. Keep writing, keep improving, and don't give up on your dreams.</p>
-    `,
-    excerpt:
-      "Navigate the complex world of publishing with insights from my personal experience as a debut author.",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop",
-    date: "March 5, 2024",
-    readTime: "12 min read",
-    category: "Publishing",
-    author: "Margaret Thorne",
-  },
+  
 ];
 
 export const ArticlesContentBrief = [

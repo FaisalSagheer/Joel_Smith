@@ -8,7 +8,7 @@ import {
 import { Button } from "@/app/components/ui/button";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { briefblogPosts } from "../constant";
+import { FullblogPosts } from "@/app/constant";
 
 
 
@@ -31,11 +31,11 @@ export function BlogSection({
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12 px-50">
-          {briefblogPosts.map((post,key) => (
-           <Link key={post.slug} 
+          {FullblogPosts.map((post,key) => (
+           <Link key={key} 
            href={post.href}
            >
-           <Card key={key}
+           <Card 
               className="group hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               <div className="relative overflow-hidden">

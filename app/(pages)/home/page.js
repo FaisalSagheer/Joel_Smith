@@ -7,9 +7,9 @@ import { NewsLetter } from "@/app/components/NewsLetter";
 import { AboutAuthor } from "@/app/components/AboutAuthor";
 import Testimonials from "@/app/components/Testimonials";
 import { BookPopup } from "@/app/components/BookPopup";
-import { BlogSection } from "@/app/components/Blog";
 import Navbar from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { BlogSection } from "../blogs/Blog";
 
 function Home() {
   const observerRef = useRef(null);

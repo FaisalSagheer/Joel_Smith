@@ -1,11 +1,11 @@
 "use client";
 
 import { Articles } from "@/app/components/Articles";
-import { BlogSection } from "@/app/components/Blog";
 import { Footer } from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import ReactLenis from "@studio-freight/react-lenis";
 import { useEffect, useRef } from "react";
+import { BlogSection } from "./Blog";
 
 const BlogsPage = () => {
   const observerRef = useRef(null);

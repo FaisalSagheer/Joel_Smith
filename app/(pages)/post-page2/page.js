@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/app/components/ui/card";
+import Post from "@/app/components/ui/post";
 import { briefblogPosts, FullblogPosts } from "@/app/constant";
 import ReactLenis from "@studio-freight/react-lenis";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
@@ -15,9 +16,6 @@ import Link from "next/link";
 import React from "react";
 
 function post() {
-  const relatedPosts = briefblogPosts
-    .filter((p) => p.id !== post.id)
-    .slice(0, 2);
   return (
     <>
       <Navbar />
@@ -36,76 +34,12 @@ function post() {
               </Link>
             </div>
             <article className="max-w-4xl mx-auto">
-              {FullblogPosts.filter(
+              {
+                FullblogPosts.filter(
                 (slugs) => slugs.slug === "the-kind-of-books-i-write"
-              ).map((post, key) => (
-                <div
-                  className="relative mb-8 rounded-lg overflow-hidden"
-                  key={key}
-                >
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-64 md:h-96 object-cover"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {post.category}
-                    </span>
-                  </div>
-                  <header className="my-8">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-slate-800 mb-4">
-                      {post.title}
-                    </h1>
-
-                    <div className="flex flex-wrap items-center gap-6 text-slate-600 mb-4">
-                      <div className="flex items-center space-x-2">
-                        <User className="w-4 h-4" />
-                        <span className="font-medium">{post.author}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Clock className="w-4 h-4" />
-                        <span>{post.readTime}</span>
-                      </div>
-                    </div>
-                    <p className="text-xl text-slate-600 leading-relaxed -mb-6">
-                      {post.excerpt}
-                    </p>
-                  </header>
-                  <div
-                    className="prose prose-lg max-w-none mb-6"
-                    dangerouslySetInnerHTML={{ __html: post.content }}
-                    style={{
-                      color: "#475569",
-                      lineHeight: "1.7",
-                    }}
-                  />
-                </div>
-              ))}
-              <Card className="mb-12 bg-slate-50">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center text-white font-serif text-2xl font-bold">
-                      J
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-serif font-bold text-slate-800 mb-2">
-                        Joel Smith
-                      </h3>
-                      <p className="text-slate-600">
-                        Joel is a debut novelist with a passion for storytelling
-                        and character development. His work explores themes of
-                        human connection, resilience, and the power of stories
-                        to transform lives.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              ).map((post,key)=>
+              <Post posts={post} key={key}/>
+              )}
           {/* {relatedPosts.length > 0 && (
             <section>
               <h2 className="text-2xl font-serif font-bold text-slate-800 mb-6">

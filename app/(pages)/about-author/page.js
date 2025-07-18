@@ -1,5 +1,4 @@
 "use client";
-import { BlogSection } from "@/app/components/Blog";
 import { Footer } from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import { Button } from "@/app/components/ui/button";
@@ -7,6 +6,7 @@ import ReactLenis from "@studio-freight/react-lenis";
 import { Award, BookOpen, Coffee, Heart, PenTool, MapPin } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { BlogSection } from "../blogs/Blog";
 
 const AboutAuthor = () => {
   const observerRef = useRef(null);
