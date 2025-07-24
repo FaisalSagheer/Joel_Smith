@@ -12,12 +12,14 @@ import {
   Mail,
   Sparkles,
   Gift,
+  Pen,
+  User,
 } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../../components/ui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export function AboutAuthor() {
+export function AboutAuthor({ showLearnMore = true, showGetBook = false }) {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -49,15 +51,20 @@ export function AboutAuthor() {
     <section className="newsletter-section relative py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-slate-100 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-16 right-20 animate-bounce delay-200">
-          <Mail className="w-8 h-8 text-amber-400/30" />
+          <Mail className="w-10 h-10 text-amber-400/30" />
         </div>
         <div className="absolute bottom-20 left-16 animate-bounce delay-400">
-          <Sparkles className="w-6 h-6 text-slate-400/40" />
+          <Sparkles className="w-10 h-10 text-slate-400/40" />
         </div>
         <div className="absolute top-1/4 right-1/3 animate-bounce delay-600">
-          <Gift className="w-5 h-5 text-amber-500/30" />
+          <Gift className="w-10 h-10 text-amber-500/30" />
         </div>
-
+        <div className="absolute top-20 left-16 animate-bounce delay-600">
+          <Pen className="w-10 h-10 text-amber-500/30" />
+        </div>
+        <div className="absolute top-1/4 left-1/3 animate-bounce delay-600">
+          <User className="w-10 h-10 text-amber-500/30" />
+        </div>
         {/* Interactive gradient orbs */}
         <div
           className="absolute w-80 h-80 rounded-full bg-gradient-to-r from-amber-300/15 to-orange-400/15 blur-3xl transition-transform duration-1500 ease-out"
@@ -126,7 +133,9 @@ export function AboutAuthor() {
                 regards titles with skepticism. Born in Chicago and shaped by
                 liberal arts, military service, abstract art, teaching, and
                 relentless introspection, Joel now lives in the woods of
-                Florida.There, he continues to write, paint, reflect, and share his unique voice with the world, not for fame, but for the simple act of honest communication.{" "}
+                Florida.There, he continues to write, paint, reflect, and share
+                his unique voice with the world, not for fame, but for the
+                simple act of honest communication.{" "}
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-end mr-10">
@@ -138,9 +147,18 @@ export function AboutAuthor() {
                       <Heart className="w-5 h-5 text-red-500" />
                       <span className="text-slate-700">Cat Mom</span>
                     </div> */}
-                <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3">
-                  <Link href="/about-author">Learn More</Link>
-                </Button>
+                {showLearnMore && (
+                  <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3">
+                    <Link href="/about-author">Learn More</Link>
+                  </Button>
+                )}
+                {showGetBook && (
+                  <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3">
+                    <Link href="https://www.amazon.com/OBSERVATIONS-OPINIONS-Aaron-Smith-PH-D-ebook/dp/B0CYVWJ1GQ/ref=sr_1_2?crid=16BWXOJY7NG4S&dib=eyJ2IjoiMSJ9.0FQ3-SxWlLSERrf0UCMTluDMTievvJbXTpzXAw80Q6rGjHj071QN20LucGBJIEps.unJpQiBAvcXzDnhimjaGeCAHvH5mOraBaJRA4141wug&dib_tag=se&keywords=Joel+Aaron+Smith&qid=1752593896&s=digital-text&sprefix=joel+aaron+smith+%2Cdigital-text%2C213&sr=1-2">
+                      Get The Book
+                    </Link>
+                  </Button>
+                )}
               </div>
             </div>
           </div>

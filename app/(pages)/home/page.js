@@ -4,7 +4,7 @@ import Hero from "@/app/components/Hero";
 import LogoCloud from "@/app/components/LogoCloud";
 import AboutBook from "@/app/components/AboutBook";
 import { NewsLetter } from "@/app/components/NewsLetter";
-import { AboutAuthor } from "@/app/components/AboutAuthor";
+import { AboutAuthor } from "@/app/(pages)/about-author/AboutAuthor";
 import Testimonials from "@/app/components/Testimonials";
 import { BookPopup } from "@/app/components/BookPopup";
 import Navbar from "@/app/components/Navbar";

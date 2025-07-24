@@ -18,10 +18,10 @@ function Website() {
         return <NotFound />;
       case "/contact":
         return <ContactPage />;
-      case "/blog":
+      case "/blogs":
         return <BlogsPage />;
-      case "/shop":
-        return <Shop />;
+      // case "/shop":
+      //   return <Shop />;
       case "/about-author":
         return <AboutAuthor />;
       case "/about-book":

@@ -40,15 +40,17 @@ function AboutBook() {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 animate-bounce delay-100">
-          <BookOpen className="w-8 h-8 text-slate-300/40" />
+          <BookOpen className="w-10 h-10 text-slate-300/40" />
         </div>
         <div className="absolute bottom-32 right-32 animate-bounce delay-300">
-          <Star className="w-6 h-6 text-amber-400/30" />
+          <Star className="w-10 h-10 text-amber-400/20" />
         </div>
-        <div className="absolute top-1/2 left-1/4 animate-bounce delay-500">
-          <Sparkles className="w-5 h-5 text-slate-400/30" />
+        <div className="absolute top-1/2 right-1/2 animate-bounce delay-500">
+          <Sparkles className="w-10 h-10 text-slate-400/20" />
         </div>
-
+        <div className="absolute bottom-20 left-40 animate-bounce delay-500">
+          <Sparkles className="w-10 h-10 text-slate-400/20" />
+        </div>
         {/* Interactive gradient orbs */}
         <div
           className="absolute w-72 h-72 rounded-full bg-gradient-to-r from-amber-400/10 to-orange-500/10 blur-3xl transition-transform duration-1000 ease-out"
@@ -144,7 +146,9 @@ function AboutBook() {
 
               <div className="flex flex-col justify-end sm:flex-row gap-4 pt-4 animate-fade-in delay-1200">
                 <Button className="bg-slate-800 hover:bg-slate-900 text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group">
-                  <Link href="https://www.amazon.com/OBSERVATIONS-OPINIONS-Aaron-Smith-PH-D-ebook/dp/B0CYVWJ1GQ/ref=sr_1_2?crid=16BWXOJY7NG4S&dib=eyJ2IjoiMSJ9.0FQ3-SxWlLSERrf0UCMTluDMTievvJbXTpzXAw80Q6rGjHj071QN20LucGBJIEps.unJpQiBAvcXzDnhimjaGeCAHvH5mOraBaJRA4141wug&dib_tag=se&keywords=Joel+Aaron+Smith&qid=1752593896&s=digital-text&sprefix=joel+aaron+smith+%2Cdigital-text%2C213&sr=1-2">Buy on Amazon</Link>
+                  <Link href="https://www.amazon.com/OBSERVATIONS-OPINIONS-Aaron-Smith-PH-D-ebook/dp/B0CYVWJ1GQ/ref=sr_1_2?crid=16BWXOJY7NG4S&dib=eyJ2IjoiMSJ9.0FQ3-SxWlLSERrf0UCMTluDMTievvJbXTpzXAw80Q6rGjHj071QN20LucGBJIEps.unJpQiBAvcXzDnhimjaGeCAHvH5mOraBaJRA4141wug&dib_tag=se&keywords=Joel+Aaron+Smith&qid=1752593896&s=digital-text&sprefix=joel+aaron+smith+%2Cdigital-text%2C213&sr=1-2">
+                    Buy on Amazon
+                  </Link>
                   <Sparkles className="w-4 h-4 ml-2 group-hover:animate-spin" />
                 </Button>
                 {/* <Button variant="outline" className="border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white hover:scale-105 transition-all duration-300">

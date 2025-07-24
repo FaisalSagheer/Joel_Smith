@@ -1,4 +1,3 @@
-"use client";
 
 export const navItems = [
   { prop: "About The Author", href: "/about-author" },
