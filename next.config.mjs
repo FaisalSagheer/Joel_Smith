@@ -4,6 +4,7 @@ eslint: {
     ignoreDuringBuilds: true,
   },
      output: "export",
+     distDir:"dist"
 };
 
 export default nextConfig;
