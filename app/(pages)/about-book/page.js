@@ -304,12 +304,12 @@ const AboutBook = () => {
                       <span className="font-medium text-slate-700">Pages</span>
                       <span className="text-slate-600">256</span>
                     </div>
-                    {/* <div className="flex justify-between border-b border-slate-200 pb-2">
+                    <div className="flex justify-between border-b border-slate-200 pb-2">
                       <span className="font-medium text-slate-700">
                         Publisher
                       </span>
                       <span className="text-slate-600">Millbrook Press</span>
-                    </div> */}
+                    </div>
                     <div className="flex justify-between border-b border-slate-200 pb-2">
                       <span className="font-medium text-slate-700">
                         Language
