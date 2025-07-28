@@ -298,18 +298,18 @@ const AboutBook = () => {
                       <span className="font-medium text-slate-700">
                         Publication Date
                       </span>
-                      <span className="text-slate-600">March 2024</span>
+                      <span className="text-slate-600"> March 21, 2024</span>
                     </div>
                     <div className="flex justify-between border-b border-slate-200 pb-2">
                       <span className="font-medium text-slate-700">Pages</span>
-                      <span className="text-slate-600">312</span>
+                      <span className="text-slate-600">256</span>
                     </div>
-                    <div className="flex justify-between border-b border-slate-200 pb-2">
+                    {/* <div className="flex justify-between border-b border-slate-200 pb-2">
                       <span className="font-medium text-slate-700">
                         Publisher
                       </span>
                       <span className="text-slate-600">Millbrook Press</span>
-                    </div>
+                    </div> */}
                     <div className="flex justify-between border-b border-slate-200 pb-2">
                       <span className="font-medium text-slate-700">
                         Language
@@ -320,9 +320,9 @@ const AboutBook = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between border-b border-slate-200 pb-2">
                       <span className="font-medium text-slate-700">
-                        ISBN-13
+                        ASIN 
                       </span>
-                      <span className="text-slate-600">978-0123456789</span>
+                      <span className="text-slate-600">B0CYVWJ1GQ</span>
                     </div>
                     <div className="flex justify-between border-b border-slate-200 pb-2">
                       <span className="font-medium text-slate-700">Format</span>
@@ -332,11 +332,11 @@ const AboutBook = () => {
                     </div>
                     <div className="flex justify-between border-b border-slate-200 pb-2">
                       <span className="font-medium text-slate-700">Genre</span>
-                      <span className="text-slate-600">Literary Fiction</span>
+                      <span className="text-slate-600">Observations</span>
                     </div>
                     <div className="flex justify-between border-b border-slate-200 pb-2">
                       <span className="font-medium text-slate-700">Price</span>
-                      <span className="text-slate-600">$24.99</span>
+                      <span className="text-slate-600">$15.99</span>
                     </div>
                   </div>
                 </div>
